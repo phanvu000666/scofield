@@ -10,8 +10,10 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <title>Scofield</title>
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/carousel.css">
+    <link rel="stylesheet" href="./assets/css/respinsive.css">
     <!-- Bootstrap core CSS -->
     <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -25,56 +27,63 @@
     <div class="main">
         <header class="header">
             <div class="header-wraper">
-                <div class="header-head">
-                    <div class="header-logo">
-                        <a href="#"><img src="./assets/images/logo.png" alt="" class="header-logo-img"></a>
+                <div class="grid wide">
+                    <div class="header-head">
+                        <div class="menu-mobile hide">
+                            <i class="fa-solid fa-bars menu-mobile-icon"></i>
+                        </div>
+                        <div class="header-logo hide-on-tablet">
+                            <a href="#"><img src="./assets/images/logo.png" alt="" class="header-logo-img"></a>
+                        </div>
+                        <div class="header-search hide-on-mobile">
+                            <input class="header-search-input" placeholder="Giày..." type="text">
+                            <button class="header-search-btn"><i
+                                    class="fa-solid fa-magnifying-glass header-search-icon"></i></button>
+                        </div>
+                        <ul class="header-head-list">
+                            <li class="header-head-item hide-on-mobile-tablet">
+                                <!-- icon -->
+                                <i class="fa-solid fa-map-location-dot head-item-icon"></i>
+                                <a href="#" class="head-item-title">Hệ thống<br>cửa hàng<i
+                                        class="fa-solid fa-chevron-down head-downicon"></i></a>
+                            </li>
+                            <li class="header-head-item hide-on-mobile-tablet">
+                                <!-- icon -->
+                                <i class="fa-solid fa-user head-item-icon"></i>
+                                <a href="#" class="head-item-title">Đăng nhập<br>Đăng ký<i
+                                        class="fa-solid fa-chevron-down head-downicon"></i></a>
+                            </li>
+                            <li class="header-head-item">
+                                <!-- icon -->
+                                <i class="fa-solid fa-cart-shopping head-item-icon">
+                                    <span class="head-cart-amount">0</span>
+                                </i>
+                                <a href="#" class="head-item-title hide-on-mobile-tablet">Giỏ hàng</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="header-search">
-                        <input class="header-search-input" placeholder="Giày..." type="text">
-                        <button class="header-search-btn"><i
-                                class="fa-solid fa-magnifying-glass header-search-icon"></i></button>
-                    </div>
-                    <ul class="header-head-list">
-                        <li class="header-head-item">
-                            <!-- icon -->
-                            <i class="fa-solid fa-map-location-dot head-item-icon"></i>
-                            <a href="#" class="head-item-title">Hệ thống<br>cửa hàng<i
-                                    class="fa-solid fa-chevron-down head-downicon"></i></a>
-                        </li>
-                        <li class="header-head-item">
-                            <!-- icon -->
-                            <i class="fa-solid fa-user head-item-icon"></i>
-                            <a href="#" class="head-item-title">Đăng nhập<br>Đăng ký<i
-                                    class="fa-solid fa-chevron-down head-downicon"></i></a>
-                        </li>
-                        <li class="header-head-item">
-                            <!-- icon -->
-                            <i class="fa-solid fa-cart-shopping head-item-icon">
-                                <span class="head-cart-amount">0</span>
-                            </i>
-                            <a href="#" class="head-item-title">Giỏ hàng</a>
-                        </li>
-                    </ul>
                 </div>
-                <nav class="header-navbar">
+                <nav class="header-navbar hide-on-mobile-tablet">
                     <ul class="header-navbar-list">
-                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Trang chủ</a></li>
-                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Giày Sneaker</a> <i
-                                class="fa-solid fa-chevron-down head-downicon"></i></li>
+                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Trang chủ</a>
+                        </li>
+                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Giày Sneaker</a>
+                            <i class="fa-solid fa-chevron-down head-downicon"></i>
+                        </li>
                         <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Nước hoa</a></li>
                         <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Phụ kiện</a></li>
                         <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Tin tức</a></li>
-                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Hướng dẫn</a></li>
+                        <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Hướng dẫn</a>
+                        </li>
                         <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Liên hệ</a></li>
                         <li class="header-navbar-item"><a href="#" class="header-navbar-item-link">Tính năng</a> <i
                                 class="fa-solid fa-chevron-down head-downicon"></i>
                         </li>
                     </ul>
                 </nav>
-            </div>
         </header>
         <div class="content">
-            <div class="content-wrapper">
+            <div class="grid wide">
                 <div class="slider">
                     <div id="myCarousel" class="carousel slide border" data-ride="carousel">
                         <!-- Indicators -->
@@ -296,7 +305,7 @@
                 </div>
                 <div class="shoes-products">
                     <div class="shoes-products-header">
-                        <h1 class="shoes-products-heading">Giày sneaker</h1>
+                        <h1 class="shoes-products-heading hide hide-on-mobile">Giày sneaker</h1>
                         <div class="shoes-products-category">
                             <a class="shoes-products-category-item active" href="#">Giày adidas</a>
                             <a class="shoes-products-category-item" href="#">Giày nike</a>
@@ -415,118 +424,119 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="shoes-products-item">
+                            <div class="shoes-products-wrapper">
+                                <div class="shoes-products-image"><img class="shoes-products-img"
+                                        src="./assets/images/adidas-product.png" alt="">
+                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
+                                    H01922</h3>
+                                <div class="shoes-products-start">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(0)</span>
+                                </div>
+                                <div class="shoes-products-price">
+                                    <span class="shoes-products-current-price">7,929,900₫</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="shoes-products-item">
+                            <div class="shoes-products-wrapper">
+                                <div class="shoes-products-image"><img class="shoes-products-img"
+                                        src="./assets/images/adidas-product.png" alt="">
+                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
+                                    H01922</h3>
+                                <div class="shoes-products-start">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(0)</span>
+                                </div>
+                                <div class="shoes-products-price">
+                                    <span class="shoes-products-current-price">7,929,900₫</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="shoes-products-item">
+                            <div class="shoes-products-wrapper">
+                                <div class="shoes-products-image"><img class="shoes-products-img"
+                                        src="./assets/images/adidas-product.png" alt="">
+                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
+                                    H01922</h3>
+                                <div class="shoes-products-start">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(0)</span>
+                                </div>
+                                <div class="shoes-products-price">
+                                    <span class="shoes-products-current-price">7,929,900₫</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="shoes-products-item">
+                            <div class="shoes-products-wrapper">
+                                <div class="shoes-products-image"><img class="shoes-products-img"
+                                        src="./assets/images/adidas-product.png" alt="">
+                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
+                                    H01922</h3>
+                                <div class="shoes-products-start">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(0)</span>
+                                </div>
+                                <div class="shoes-products-price">
+                                    <span class="shoes-products-current-price">7,929,900₫</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="shoes-products-item">
+                            <div class="shoes-products-wrapper">
+                                <div class="shoes-products-image"><img class="shoes-products-img"
+                                        src="./assets/images/adidas-product.png" alt="">
+                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
+                                    H01922</h3>
+                                <div class="shoes-products-start">
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span>(0)</span>
+                                </div>
+                                <div class="shoes-products-price">
+                                    <span class="shoes-products-current-price">7,929,900₫</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="shoes-products-list">
-                        <li class="shoes-products-item">
-                            <div class="shoes-products-wrapper">
-                                <div class="shoes-products-image"><img class="shoes-products-img"
-                                        src="./assets/images/adidas-product.png" alt="">
-                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
-                                    H01922</h3>
-                                <div class="shoes-products-start">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>(0)</span>
-                                </div>
-                                <div class="shoes-products-price">
-                                    <span class="shoes-products-current-price">7,929,900₫</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="shoes-products-item">
-                            <div class="shoes-products-wrapper">
-                                <div class="shoes-products-image"><img class="shoes-products-img"
-                                        src="./assets/images/adidas-product.png" alt="">
-                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
-                                    H01922</h3>
-                                <div class="shoes-products-start">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>(0)</span>
-                                </div>
-                                <div class="shoes-products-price">
-                                    <span class="shoes-products-current-price">7,929,900₫</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="shoes-products-item">
-                            <div class="shoes-products-wrapper">
-                                <div class="shoes-products-image"><img class="shoes-products-img"
-                                        src="./assets/images/adidas-product.png" alt="">
-                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
-                                    H01922</h3>
-                                <div class="shoes-products-start">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>(0)</span>
-                                </div>
-                                <div class="shoes-products-price">
-                                    <span class="shoes-products-current-price">7,929,900₫</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="shoes-products-item">
-                            <div class="shoes-products-wrapper">
-                                <div class="shoes-products-image"><img class="shoes-products-img"
-                                        src="./assets/images/adidas-product.png" alt="">
-                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
-                                    H01922</h3>
-                                <div class="shoes-products-start">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>(0)</span>
-                                </div>
-                                <div class="shoes-products-price">
-                                    <span class="shoes-products-current-price">7,929,900₫</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="shoes-products-item">
-                            <div class="shoes-products-wrapper">
-                                <div class="shoes-products-image"><img class="shoes-products-img"
-                                        src="./assets/images/adidas-product.png" alt="">
-                                    <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                                <h3 class="shoes-products-name">Giày Adidas Forum Exhibit Mid 'Cream Pink'
-                                    H01922</h3>
-                                <div class="shoes-products-start">
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <span>(0)</span>
-                                </div>
-                                <div class="shoes-products-price">
-                                    <span class="shoes-products-current-price">7,929,900₫</span>
-                                </div>
-                            </div>
-                        </li>
+
                     </ul>
                     <div class="see-all">
                         <button class="see-all-btn shoes-products-btn">Xem tất cả <i
@@ -547,7 +557,8 @@
                                 <ul class="group-product-list">
                                     <li class="promotional-products-item group-product-item">
                                         <div class="promotional-products-wrapper group-product-wrapper">
-                                            <div class="promotional-product-image"><img class="promotional-product-img"
+                                            <div class="promotional-product-image products-img-wrapper"><img
+                                                    class="promotional-product-img products-img"
                                                     src="./assets/images/promotional-product.png" alt="">
                                                 <div class="promotional-product-sale-off">-11%</div>
                                                 <div class="promotional-product-cart"><i
@@ -568,9 +579,10 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="shoes-products-item group-product-item">
+                                    <li class="shoes-products-item group-product-item hide-on-mobile-tablet">
                                         <div class="shoes-products-wrapper group-product-wrapper">
-                                            <div class="shoes-products-image"><img class="shoes-products-img"
+                                            <div class="shoes-products-image"><img
+                                                    class="shoes-products-img products-img"
                                                     src="./assets/images/promotional-product.png" alt="">
 
                                                 <div class="shoes-products-cart"><i class="fa-solid fa-cart-plus"></i>
@@ -637,7 +649,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="shoes-products-item group-product-item">
+                                    <li class="shoes-products-item group-product-item hide-on-mobile-tablet">
                                         <div class="shoes-products-wrapper group-product-wrapper">
                                             <div class="shoes-products-image"><img
                                                     class="shoes-products-img products-img"
@@ -660,7 +672,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <span style="" class="group-product-pages pages">
+                                <span class="group-product-pages pages">
                                     <div class="circle current-pages-group-product"></div>
                                     <div class="circle white-bg"></div>
                                     <div class="circle white-bg"></div>
@@ -710,7 +722,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="shoes-products-item group-product-item">
+                                    <li class="shoes-products-item group-product-item hide-on-mobile-tablet">
                                         <div class="shoes-products-wrapper group-product-wrapper">
                                             <div class="shoes-products-image"><img class="shoes-products-img"
                                                     src="./assets/images/nuochoaproduct.png" alt="">
@@ -780,7 +792,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="shoes-products-item group-product-item">
+                                    <li class="shoes-products-item group-product-item hide-on-mobile-tablet">
                                         <div class="shoes-products-wrapper group-product-wrapper">
                                             <div class="shoes-products-image"><img
                                                     class="shoes-products-img products-img"
@@ -805,7 +817,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <span style="" class="group-product-pages pages">
+                                <span class="group-product-pages pages">
                                     <div class="circle current-pages-group-product"></div>
                                     <div class="circle white-bg"></div>
                                     <div class="circle white-bg"></div>
@@ -910,95 +922,99 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="footer-wrapper">
-                <div class="footer-head">
-                    <h2 class="footer-head-heading">Đăng kí nhận tin</h2>
-                    <div class="send-email">
-                        <input class="send-email-input" type="text" placeholder="Email">
-                        <button class="send-email-btn"><i class="fa-regular fa-paper-plane send-icon"></i>Đăng
-                            ký</button>
+            <div class="grid wide">
+                <div class="footer-wrapper">
+                    <div class="footer-head">
+                        <h2 class="footer-head-heading hide-on-mobile-tablet">Đăng kí nhận tin</h2>
+                        <div class="send-email">
+                            <input class="send-email-input" type="text" placeholder="Email">
+                            <button class="send-email-btn"><i class="fa-regular fa-paper-plane send-icon"></i>Đăng
+                                ký</button>
+                        </div>
+                        <ul class="social-network">
+                            <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/zalo.jpg"
+                                        alt=""></a></li>
+                            <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/tiktok.png"
+                                        alt=""></a></li>
+                            <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/twiter.png"
+                                        alt=""></a></li>
+                            <li class="social-item"><a href="#"><img class="social-img"
+                                        src="./assets/images/youtobe.png" alt=""></a></li>
+                            <li class="social-item"><a href="#"><img class="social-img"
+                                        src="./assets/images/instagram.jpg" alt=""></a></li>
+                            <li class="social-item"><a href="#"><img class="social-img"
+                                        src="./assets/images/facebook.png" alt=""></a></li>
+                        </ul>
                     </div>
-                    <ul class="social-network">
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/zalo.jpg"
-                                    alt=""></a></li>
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/tiktok.png"
-                                    alt=""></a></li>
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/twiter.png"
-                                    alt=""></a></li>
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/youtobe.png"
-                                    alt=""></a></li>
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/instagram.jpg"
-                                    alt=""></a></li>
-                        <li class="social-item"><a href="#"><img class="social-img" src="./assets/images/facebook.png"
-                                    alt=""></a></li>
-                    </ul>
+                    <div class="footer-content">
+                        <div class="footer-introduce footer-content-col-item">
+                            <h2 class="footer-content-heading">Giới thiệu</h2>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-item"><a href="#" class="footer-content-item-link">Wd Shoes
+                                        Scofield chuyên cung cấp các loại giày authentic với giá cả ưu đãi nhất thị
+                                        trường</a></li>
+                                <li class="footer-content-item"><a href="#" class="footer-content-item-link"><i
+                                            class="fa-solid fa-location-dot footer-introduce-icon"></i> 59A u cơ,
+                                        Phường 14, Quận 11, TP. HCM</a></li>
+                                <li class="footer-content-item"><i
+                                        class="fa-solid fa-phone footer-introduce-icon"></i><a href="#"
+                                        class="footer-content-item-link">0385942049</a>
+                                </li>
+                                <li class="footer-content-item"><i
+                                        class="fa-regular fa-envelope footer-introduce-icon"></i><a
+                                        href="mailto:vuhuuhanh01@gmail.com"
+                                        class="footer-content-item-link">vuhuuhanh01@gmail.com</a></li>
+                                <li class="footer-content-item"><img class="footer-content-item-img" cla
+                                        src="./assets/images/dathongbaobocongthuong.png" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="footer-policy footer-content-col-item">
+                            <h2 class="footer-content-heading">Chính sách</h2>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Hệ thống của
+                                        hàng</a></li>
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Giới thiệu</a>
+                                </li>
+
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Chính sách đổi
+                                        trả</a></li>
+
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Chính sách bảo
+                                        mật</a></li>
+
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Điều khoản dịch
+                                        vụ</a></li>
+
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Liên hệ</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="footer-guide footer-content-col-item">
+                            <h2 class="footer-content-heading">Hướng dẫn</h2>
+                            <ul class="footer-content-list">
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Sản phẩm nổi
+                                        bật</a></li>
+                                <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
+                                        href="#" class="footer-content-item-link">Tất cả sản
+                                        phẩm</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-fanpage footer-content-col-item">
+                            <h2 class="footer-content-heading">Fanpage chúng tôi</h2>
+                            <div class="fb-page" data-href="https://www.facebook.com/haravan.official/" data-width="283"
+                                data-hide-cover="false" data-show-facepile="false"></div>
+                        </div>
+                        <div class="gototop"><i class="fa-solid fa-circle-up gototopicon"></i></div>
+                    </div>
                 </div>
-                <div class="footer-content">
-                    <div class="footer-introduce footer-content-col-item">
-                        <h2 class="footer-content-heading">Giới thiệu</h2>
-                        <ul class="footer-content-list">
-                            <li class="footer-content-item"><a href="#" class="footer-content-item-link">Wd Shoes
-                                    Scofield chuyên cung cấp các loại giày authentic với giá cả ưu đãi nhất thị
-                                    trường</a></li>
-                            <li class="footer-content-item"><a href="#" class="footer-content-item-link"><i
-                                        class="fa-solid fa-location-dot footer-introduce-icon"></i> 59A u cơ,
-                                    Phường 14, Quận 11, TP. HCM</a></li>
-                            <li class="footer-content-item"><i class="fa-solid fa-phone footer-introduce-icon"></i><a
-                                    href="#" class="footer-content-item-link">0385942049</a>
-                            </li>
-                            <li class="footer-content-item"><i
-                                    class="fa-regular fa-envelope footer-introduce-icon"></i><a
-                                    href="mailto:vuhuuhanh01@gmail.com"
-                                    class="footer-content-item-link">vuhuuhanh01@gmail.com</a></li>
-                            <li class="footer-content-item"><img class="footer-content-item-img" cla
-                                    src="./assets/images/dathongbaobocongthuong.png" alt=""></li>
-                        </ul>
-                    </div>
-                    <div class="footer-policy footer-content-col-item">
-                        <h2 class="footer-content-heading">Chính sách</h2>
-                        <ul class="footer-content-list">
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Hệ thống của
-                                    hàng</a></li>
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Giới thiệu</a>
-                            </li>
 
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Chính sách đổi
-                                    trả</a></li>
-
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Chính sách bảo
-                                    mật</a></li>
-
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Điều khoản dịch
-                                    vụ</a></li>
-
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Liên hệ</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="footer-guide footer-content-col-item">
-                        <h2 class="footer-content-heading">Hướng dẫn</h2>
-                        <ul class="footer-content-list">
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Sản phẩm nổi
-                                    bật</a></li>
-                            <li class="footer-content-item"><i class="fa-solid fa-circle circle-icon-item"></i> <a
-                                    href="#" class="footer-content-item-link">Tất cả sản
-                                    phẩm</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-fanpage footer-content-col-item">
-                        <h2 class="footer-content-heading">Fanpage chúng tôi</h2>
-                        <div class="fb-page" data-href="https://www.facebook.com/haravan.official/" data-width="283"
-                            data-hide-cover="false" data-show-facepile="false"></div>
-                    </div>
-                </div>
-                <div class="gototop"><i class="fa-solid fa-circle-up gototopicon"></i></div>
             </div>
         </footer>
     </div>
@@ -1008,7 +1024,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" nonce="zctiBukD"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0"
+        nonce="zctiBukD"></script>
 </body>
 
 </html>
